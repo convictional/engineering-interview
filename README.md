@@ -17,4 +17,4 @@ Here are the so called jobs to be done:
 * Please include test coverage that provides reasonable (not necessarily 100%) test coverage of your implementation
 * Please provide a runnable solution, so that we can aim it at before.json locally and print after.json
 
-To share your completed work, please create a private repo on GitHub and share it with roger@convictional.com so that we can review it. Let me know too, if it doesn’t notify me.
+To share your completed work, please create a private repo on GitHub and share it with roger@convictional.com so that we can review it. Let me know too, if it doesn’t notify me. Aim to complete the work in under two hours. If it takes significantly longer, please give us that feedback so we can reduce the scope to be a two hour length of time (more or less).
