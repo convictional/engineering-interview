@@ -13,7 +13,7 @@ There are two primary objectives of this challenge:
 1. Read in the product data located at https://my-json-server.typicode.com/convictional/engineering-interview/products and convert it to an internal format. (you may represent the data locally however you want as long as the API matches the contract.yaml file as specified below)
 1. Create an API that fulfills the API Contract found in `contract.yaml` using the data from step 1. (you can view this more easily in the [swagger editor](https://editor.swagger.io/), or with a tool such as [insomnia designer](https://insomnia.rest/products/designer/))
 
-The end goal of this challenge is to provide a codebase that can be ran locally with an API that is accessed via localhost. No hosting of the API on a cloud provider is required.
+The end goal of this challenge is to provide a codebase that can be run locally with an API that is accessed via localhost. No hosting of the API on a cloud provider is required.
 
 There are three 'optional' objectives: (a submission without these is 100% complete and will not be considered less than one with these, they will just add additional datapoints to the submission)
 
