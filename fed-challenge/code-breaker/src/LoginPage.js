@@ -2,7 +2,7 @@ import React from "react";
 import { Form, Button } from "react-bootstrap";
 import styled from "styled-components";
 import { useForm } from "react-hook-form";
-import { loginUser } from "./api";
+// import { loginUser } from "./api";
 
 function LoginPage({ history }) {
   const { register, handleSubmit } = useForm();
@@ -10,8 +10,6 @@ function LoginPage({ history }) {
     // TODO: finish form submission by handling "api" response
     // once user is logged in, redirect them to main page
     // make sure to handle when response rejects with error (BONUS: add error message to UI)
-    //////////////////
-    // loginUser(data)
   };
 
   return (
