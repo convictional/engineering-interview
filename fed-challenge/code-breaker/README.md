@@ -32,9 +32,9 @@ The purpose of the game is for the user to try and guess a code. When a new game
 
 ## Bonus tasks - Not required, but cool if you have the time
 
-1. Handle errors and loading states nicely in the UI. Not required, but a nice touch.
+1. Handle errors and loading states nicely in the Login UI. Not required, but a nice touch.
 
-1. Improve the styling of the game, feel free to do what you wish here. We are not assessing design skills, so this isn't a requirement, but it is also a nice touch.
+1. Improve the styling of the game, feel free to do what you wish here. We are not assessing design skills, but it is also a nice touch.
 
 1. Allow user to choose a difficulty level. For example, easy is a 3 block code, medium is a 5 block code and hard is a 7 block code.
 
