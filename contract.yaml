@@ -21,7 +21,7 @@ paths:
         tags:
         - product
         summary: Find product by ID
-        description: Returns a single product
+        description: Returns a list of products
         operationId: getAllProducts
         responses:
           200:
