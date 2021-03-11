@@ -24,17 +24,20 @@ paths:
         description: Returns a list of products
         operationId: getAllProducts
         responses:
-          200:
-            description: successful operation
+          "200":
+            description: Successful operation
             content:
               application/json:
                 schema:
                   type: array
                   items:
                     $ref: '#/components/schemas/product'
-          404:
-            description: product not found
-            content: {}
+          "404":
+            description: Product not found
+            content: 
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/error'
   /products/{productId}:
     get:
       tags:
@@ -51,18 +54,24 @@ paths:
           type: integer
           format: int64
       responses:
-        200:
-          description: successful operation
+        "200":
+          description: Successful operation
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/product'
-        400:
+        "400":
           description: Invalid ID supplied
-          content: {}
-        404:
-          description: product not found
-          content: {}
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+        "404":
+          description: Product not found
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
   /store/inventory:
     get:
       tags:
@@ -71,8 +80,8 @@ paths:
       description: Returns an array of inventory objects for each variant
       operationId: getInventory
       responses:
-        200:
-          description: successful operation
+        "200":
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -151,3 +160,10 @@ components:
         variantId:
           type: string
           description: ID for the variant the image relates to
+    error:
+        required:
+        - message
+        type: object
+        properties:
+          message:
+            type: string
