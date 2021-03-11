@@ -12,11 +12,11 @@ tags:
 - name: product
   description: Representation of a seller's products
 - name: store
-description: Representation of a seller's storefront
+  description: Representation of a seller's storefront
 
 # API Paths
 paths:
-  /product:
+  /products:
     get:
         tags:
         - product
@@ -29,11 +29,13 @@ paths:
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/product'
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/product'
           404:
             description: product not found
             content: {}
-  /product/{productId}:
+  /products/{productId}:
     get:
       tags:
       - product
@@ -77,7 +79,7 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/inventory'
- 
+
  # API Objects
 components:
   schemas:
