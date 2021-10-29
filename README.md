@@ -19,7 +19,7 @@ The end goal of this challenge is to provide a codebase that can be run locally 
 
 You can view the API contract more easily in the [swagger editor](https://editor.swagger.io/), or with a tool such as [insomnia designer](https://insomnia.rest/products/designer/)
 
-Docker can be used to create a much more robust startup process, especially if you are using a language like Python or NodeJS
+Consider using Docker to create a much more robust startup process, especially if you are using a language like Python or NodeJS
 
 ## Metrics
 
