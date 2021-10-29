@@ -10,16 +10,16 @@ To complete the challenge, write some code that handles the following specificat
 
 There are two primary objectives of this challenge:
 
-1. Read in the product data located at https://my-json-server.typicode.com/convictional/engineering-interview/products and convert it to an internal format. (you may represent the data locally however you want as long as the API matches the contract.yaml file as specified below)
-1. Create an API that fulfills the API Contract found in `contract.yaml` using the data from step 1. (you can view this more easily in the [swagger editor](https://editor.swagger.io/), or with a tool such as [insomnia designer](https://insomnia.rest/products/designer/))
+1. Read in the product data located at https://my-json-server.typicode.com/convictional/engineering-interview-api/products via HTTP
+1. Present the data from step 1 using an API that fulfills the API Contract found in `contract.yaml`
 
 The end goal of this challenge is to provide a codebase that can be run locally with an API that is accessed via localhost. No hosting of the API on a cloud provider is required.
 
-There are three 'optional' objectives: (a submission without these is 100% complete and will not be considered less than one with these, they will just add additional datapoints to the submission)
+## Tips
 
-1. Add unit tests to your application, that show us you know which parts are important to have automated QA (and which don't)
-1. Wrap the application in a Docker container, that shows us you have experience shipping consistently built and delivered cloud software. (also ensures the reviewer can run this locally)
-1. Using a persistence layer (NoSQL or SQL) and handling updates to the saved products, showing us you have depth on the backing service side and it isn't just limited to business logic.
+You can view the API contract more easily in the [swagger editor](https://editor.swagger.io/), or with a tool such as [insomnia designer](https://insomnia.rest/products/designer/)
+
+Consider using Docker to create a much more robust startup process, especially if you are using a language like Python or NodeJS
 
 ## Metrics
 
@@ -41,6 +41,6 @@ Knowing when and where to abstract a component is one of the more important skil
 
 You will be collaborating with other engineers on this team, so having readable code that someone could understand easily without needing to spend a large legnth of time with the author is critical in a remote team.
 
-***Was the submission easy to setup and test locally?**
+**Was the submission easy to setup and test locally?**
 
 This shows that care was put into the submission as a whole, and allows for the reviewer to easily hop right in and spend more time reviewing the code, rather than setting up a complex environment.
