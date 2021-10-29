@@ -139,6 +139,7 @@ components:
         inventory_quantity:
           type: integer
           format: int64
+          description: Inventory for given variant. Should be 0 if no information provided
         weight:
           $ref: '#/components/schemas/weight'
     weight:
