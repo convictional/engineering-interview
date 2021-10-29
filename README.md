@@ -10,7 +10,7 @@ To complete the challenge, write some code that handles the following specificat
 
 There are two primary objectives of this challenge:
 
-1. Read in the product data located at https://my-json-server.typicode.com/convictional/engineering-interview-api/products
+1. Read in the product data located at https://my-json-server.typicode.com/convictional/engineering-interview-api/products via HTTP
 1. Present the data from step 1 using an API that fulfills the API Contract found in `contract.yaml`
 
 The end goal of this challenge is to provide a codebase that can be run locally with an API that is accessed via localhost. No hosting of the API on a cloud provider is required.
@@ -41,6 +41,6 @@ Knowing when and where to abstract a component is one of the more important skil
 
 You will be collaborating with other engineers on this team, so having readable code that someone could understand easily without needing to spend a large legnth of time with the author is critical in a remote team.
 
-***Was the submission easy to setup and test locally?**
+**Was the submission easy to setup and test locally?**
 
 This shows that care was put into the submission as a whole, and allows for the reviewer to easily hop right in and spend more time reviewing the code, rather than setting up a complex environment.
