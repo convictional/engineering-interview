@@ -20,7 +20,7 @@ paths:
     get:
         tags:
         - product
-        summary: Find product by ID
+        summary: List Products
         description: Returns a list of products
         operationId: getAllProducts
         responses:
@@ -32,12 +32,6 @@ paths:
                   type: array
                   items:
                     $ref: '#/components/schemas/product'
-          "404":
-            description: Product not found
-            content: 
-              application/json:
-                schema:
-                  $ref: '#/components/schemas/error'
   /products/{productId}:
     get:
       tags:
