@@ -1,9 +1,20 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import styled from "styled-components";
-import { COLORS, formatTime } from "./utils";
+import { ColorChoice, ControlButton, ControlsColumn, GameColumn, GuessBlock, Header, Page, TimeDisplay, Wrapper } from "./Shared.styles";
+import { formatTime } from "./utils";
 
-const initialGuess = [null, null, null, null, null];
+// Example colors, feel free to change these if you want
+export const COLORS = [
+  "#f44336",
+  "#2196f3",
+  "#ffeb3b",
+  "#4caf50",
+  "#7e57c2",
+  "#795548",
+];
+
+const INITIAL_GUESS = [null, null, null, null, null];
+
 
 /**
  * Note: A user should only be able to access this page if they are logged in
@@ -16,10 +27,10 @@ const initialGuess = [null, null, null, null, null];
  */
 function GamePage({ history }) {
   const [selectedColor, setSelectedColor] = useState(COLORS[0]);
-  const [currentGuess, setCurrentGuess] = useState(initialGuess);
+  const [currentGuess, setCurrentGuess] = useState(INITIAL_GUESS);
 
   const onNewGame = () => {
-    setCurrentGuess(initialGuess);
+    setCurrentGuess(INITIAL_GUESS);
     // TODO: Finish starting new game
   };
 
@@ -41,11 +52,11 @@ function GamePage({ history }) {
   };
 
   return (
-    <>
+    <Page>
       <Header>
         <h1 className="mb-0">Code Breaker</h1>
       </Header>
-      <Container>
+      <Wrapper>
         <GameColumn>
           <div className="d-flex pt-3 align-items-center">
             <Button variant="secondary">Guess</Button>
@@ -76,74 +87,9 @@ function GamePage({ history }) {
             Logout
           </ControlButton>
         </ControlsColumn>
-      </Container>
-    </>
+      </Wrapper>
+    </Page>
   );
 }
 
 export default GamePage;
-
-// styles
-
-const Header = styled.header`
-  text-transform: uppercase;
-  color: var(--secondary);
-  background: var(--light);
-  text-align: center;
-  border-bottom: 1px solid var(--secondary);
-  padding: 1rem;
-
-  & > h1 {
-    font-size: 2rem;
-  }
-`;
-
-const Container = styled.div`
-  margin: 1rem auto;
-  display: flex;
-  width: 40rem;
-`;
-
-const GameColumn = styled.div`
-  width: 30rem;
-`;
-
-const ControlsColumn = styled.div`
-  width: 10rem;
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 0.5rem;
-`;
-
-const ColorChoice = styled.div`
-  border-radius: 4px;
-  background: ${(props) => props.color};
-  width: 100%;
-  height: 3.5rem;
-  border: ${(props) => (props.active ? "4px solid var(--dark)" : "none")};
-  cursor: pointer;
-`;
-
-const GuessBlock = styled.div`
-  border: ${(props) => (props.color ? "none" : "2px dashed #eee")};
-  border-radius: 4px;
-  height: 3rem;
-  width: 3rem;
-  margin: 0 0.5rem;
-  background: ${(props) => (props.color ? props.color : "white")};
-  cursor: pointer;
-`;
-
-const TimeDisplay = styled.p`
-  text-align: center;
-  grid-column: span 2;
-  color: var (--secondary);
-  font-size: 2rem;
-  margin-top: 1rem;
-  margin-bottom: 0rem;
-`;
-
-const ControlButton = styled(Button)`
-  grid-column: span 2;
-`;

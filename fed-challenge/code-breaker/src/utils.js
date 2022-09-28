@@ -1,13 +1,3 @@
-// Example colors, feel free to change these if you want
-export const COLORS = [
-  "#f44336",
-  "#2196f3",
-  "#ffeb3b",
-  "#4caf50",
-  "#7e57c2",
-  "#795548",
-];
-
 // Simple utility to format time string in 00:00 structure
 export const formatTime = (seconds) => {
   const mins = Math.floor(seconds / 60)

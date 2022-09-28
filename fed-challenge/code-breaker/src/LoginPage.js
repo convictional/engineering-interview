@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
-import styled from "styled-components";
 import { useForm } from "react-hook-form";
+import { Header, Page, Wrapper } from "./Shared.styles";
 // import { loginUser } from "./api";
 
 function LoginPage({ history }) {
@@ -14,8 +14,10 @@ function LoginPage({ history }) {
 
   return (
     <Page>
-      <h1>Code Breaker - Sign In</h1>
-      <Container>
+      <Header>
+        <h1 className="mb-0">Code Breaker</h1>
+      </Header>
+      <Wrapper>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Form.Group controlId="usernameField">
             <Form.Control
@@ -38,31 +40,9 @@ function LoginPage({ history }) {
             Sign In
           </Button>
         </Form>
-      </Container>
+      </Wrapper>
     </Page>
   );
 }
 
 export default LoginPage;
-
-// styles
-
-const Page = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-bottom: 3rem;
-
-  & > h1 {
-    max-width: 500px;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-`;
-
-const Container = styled.div`
-  width: 500px;
-`;
