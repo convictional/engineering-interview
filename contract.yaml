@@ -1,9 +1,9 @@
 openapi: 3.0.1
 info:
   title: Convictional Interview API Contract
-  description: This is the required output for the Convictional Eng Challenge
+  description: This is the required output for the Convictional Engineering Challenge
   contact:
-    email: samuel@convictional.com
+    email: prentice@convictional.com
   version: 1.0.0
 externalDocs:
   description: Find out more about Convictional
@@ -133,7 +133,7 @@ components:
         inventory_quantity:
           type: integer
           format: int64
-          description: Inventory for given variant. Should be 0 if no information provided
+          description: Inventory for given variant, should be 0 if no information provided
         weight:
           $ref: '#/components/schemas/weight'
     weight:
